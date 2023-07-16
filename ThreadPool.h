@@ -3,7 +3,7 @@
 #include <vector>
 #include <future>
 #include <thread>
-#include "Queue.h"
+
 
 template<template<class> class Thread_safe_queue>
 class ThreadPool {
@@ -49,5 +49,3 @@ public:
         queue.push(std::move(newTask));
     }
 };
-
-template class ThreadPool<queue>;
